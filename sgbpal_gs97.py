@@ -38,7 +38,7 @@ def is_grayscale(palette):
 	return (palette == ((31, 31, 31), (21, 21, 21), (10, 10, 10), (0, 0, 0)) or
 		palette == ((31, 31, 31), (20, 20, 20), (10, 10, 10), (0, 0, 0)))
 
-def fix_pal(filename, palette_name, palettes, palettes_shiny, mode):
+def colorize(filename, palette_name, palettes, palettes_shiny, mode):
         with open(filename, "rb") as file:
                 width, height, rows = png.Reader(file).asRGBA8()[:3]
                 rows = list(rows)
@@ -123,7 +123,7 @@ def main():
                                         for filename in sys.argv[3:]:
                                                 if not filename.lower().endswith('.png'):
                                                         print(f"{filename} is not a .png file!", file=sys.stderr)
-                                                elif not fix_pal(filename, palette_name, palettes, palettes_shiny, mode):
+                                                elif not colorize(filename, palette_name, palettes, palettes_shiny, mode):
                                                         print(f"{filename} has too many colors!", file=sys.stderr)
                 else:
                         if sys.argv[1].lower() not in palettes:
@@ -138,7 +138,7 @@ def main():
                                 for filename in sys.argv[2:]:
                                         if not filename.lower().endswith('.png'):
                                                 print(f"{filename} is not a .png file!", file=sys.stderr)
-                                        elif not fix_pal(filename, palette_name, palettes, palettes_shiny, mode):
+                                        elif not colorize(filename, palette_name, palettes, palettes_shiny, mode):
                                                 print(f"{filename} has too many colors!", file=sys.stderr)
         		
 if __name__ == '__main__':
