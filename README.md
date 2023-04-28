@@ -11,7 +11,7 @@ Convert the white SGB color of *Pokémon Green* sprites to those of *Pokémon Re
 ## rb2g.py
 Usage: `python rb2g.py pic.png`
 
-Convert the white SGB color of *Pokémon Red*/*Green* sprites to those of *Pokémon Green*. Images will become indexed.
+Convert the white SGB color of *Pokémon Red*/*Blue* sprites to those of *Pokémon Green*. Images will become indexed.
 
 ## sgbpal_g.py
 Usage: `python sgbpal_g.py palette_name pic.png`
