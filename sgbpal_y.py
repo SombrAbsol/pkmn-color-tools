@@ -65,7 +65,7 @@ def colorize(filename, palette_name, palettes_sgb, palettes_gbc, mode):
         return True
 
 def main():
-        palettes_sgb = {"mewmon": ((31,31,30), (31,30,2), (27,16,16), (6,6,6)),
+        palettes_sgb = {"mewmon": ((31,31,30), (31,30,22), (27,16,16), (6,6,6)),
                         "bluemon": ((31,31,30), (21,22,31), (9,10,20), (6,6,6)),
                         "redmon": ((31,31,30), (31,24,11), (26,9,6), (6,6,6)),
                         "cyanmon": ((31,31,30), (26,28,31), (7,24,28), (6,6,6)),
