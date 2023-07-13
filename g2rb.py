@@ -17,6 +17,7 @@ def g2rb(filename):
     img = Image.open(filename)
     img = img.convert("RGB")
     datas = img.getdata()
+    new_image_data = []
     for item in datas:
         if item[0] == 247 and item[1] == 255 and item[2] == 239:
                 new_image_data.append((255, 239, 255))

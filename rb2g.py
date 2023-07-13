@@ -17,6 +17,7 @@ def rb2g(filename):
     img = Image.open(filename)
     img = img.convert("RGB")
     datas = img.getdata()
+    new_image_data = []
     for item in datas:
         if item[0] == 255 and item[1] == 239 and item[2] == 255:
                 new_image_data.append((247, 255, 239))
